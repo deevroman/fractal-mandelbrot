@@ -1,11 +1,10 @@
 #include <QApplication>
-#include <QMainWindow>
 #include "window.hpp"
 
 int main(int argc, char** argv) {
   QApplication app(argc, argv);
   Window window;
-  window.resize(500, 500);
+  window.setFixedSize(1024, 1024);
   window.setWindowTitle("Window");
   window.show();
   return app.exec();
