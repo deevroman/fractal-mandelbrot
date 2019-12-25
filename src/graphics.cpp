@@ -80,6 +80,9 @@ void Graphics::paintEvent(QPaintEvent* event) {
   }
   QPainter painter(this);
   painter.drawImage(r.topLeft(), image);
+  for(auto &thread : threads){
+    delete thread;
+  }
 }
 
 bool Graphics::isMandelbrot(const complex::Complex &point) {
